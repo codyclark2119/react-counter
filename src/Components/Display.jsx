@@ -1,14 +1,22 @@
-import React, {useState} from 'react';
+import React from 'react';
+import { useCountContext } from "../utils/GlobalState";
 
-function Display(props) {
-    // const [display,setDisplay] = useState(0);
+function Display() {
+    const [state, dispatch] = useCountContext();
 
     return (
         <section className="display">
-            This is the Display for the Counter.
+            The count is {state.count}
+            <aside>
+                Your count history:
+                <ol>
+                    {state.hist.map(num => {
+                      return <li>{num}</li>  
+                    })}
+                </ol>
+            </aside>
         </section>
     )
-
 
 }
 
