@@ -6,14 +6,14 @@ function Display() {
 
     return (
         <section className="display">
-            The count is {state.count}
-            <aside>
-                Your count history:
-                <ol>
+            <div id='counter'>{state.count}</div>
+            Your count history:
+            <aside id='history'>
+                <div >
                     {state.hist.map(num => {
-                      return <li>{num}</li>  
+                      return <p>{`${num}`}</p>  
                     })}
-                </ol>
+                </div>
             </aside>
         </section>
     )
