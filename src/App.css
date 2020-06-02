@@ -30,16 +30,16 @@ button {
 
 #counter {
   background-color: black;
-  height: 100px;
-  width: auto;
+  height: 60px;
+  width: 200px;
   color: white;
   font-size: 500%;
   margin: 5%;
-  border-radius: 25%;
+  border-radius: 5%;
 }
 
 #history {
-  height: 300px;
+  height: 125px;
   width: 100%;
   margin: 0 auto;
 }
@@ -57,5 +57,10 @@ button {
 ::-webkit-scrollbar-thumb {
   background: black;
   height: 30%;  
+}
 
+@media screen and (min-width: 750px){
+  #history {
+    height: 350px;
+  }
 }
